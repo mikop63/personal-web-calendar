@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Добавляем красивую картинку на фон по центру */
+.background{
+    background: url("/static/css/gradient.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    /* Выставляем элемент по центру */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.brightness{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* цвет фона убрали */
+    background-color: transparent;
+    /* затемнение на 50% */
+    backdrop-filter: brightness(50%);
+    -webkit-backdrop-filter: brightness(50%);
+    height: 100vh;
+    width: 100%;
+    border-radius: 0px;
+}
+
+#calendar{
+    height: auto;
+    width: 80%;
+    min-width: 170px;
+    max-width: 400px;
+    background-color: aqua;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.nameMonth{
+    margin: auto;
+}
+
+.nameWeek{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nameWeek div{
+    
+    display: inline-block;
+    /* делим на 7 блоков и отнимаем 5 для рамки */
+    flex: 0 0 calc(100% / 7);
+}
+
+.nameWeek div p{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    border: solid;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.nameWeek div:nth-last-child(2) p, .nameWeek div:nth-last-child(1) p{
+    border-color: red;
+}
+
+.line{
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    margin: 1vh 0 ;
+}
+
+.days{
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.days li{
+
+    list-style: none;
+    display: inline-block;
+    flex: 0 0 calc(100% / 7);
+    text-align: center;
+    line-height: 2rem;
+}
+
